@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 public class PassengerList {
    private String packageName;
-   private int packageCapactiy;
+   private int packageCapacity;
    private int passengerCount;
    private List<Passenger> passengerList;
 }

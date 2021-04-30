@@ -3,6 +3,7 @@ package com.nymble.demo.travel.Printer.PassengerPrinter;
 import com.nymble.demo.travel.Exchanges.ActivityPassenger;
 import com.nymble.demo.travel.Exchanges.PassengerList;
 import com.nymble.demo.travel.Exchanges.PassengerResult;
+import com.nymble.demo.travel.dto.Passenger;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,6 +32,13 @@ public class PassengerPrinterImpl implements PassengerPrinter {
 
     @Override
     public void allPassengersPrinter(PassengerList passengerList) {
+        System.out.println("Package Name: " + passengerList.getPackageName()
+                    + "\nPassenger Capacity: " + passengerList.getPackageCapacity()
+                    + "\nPassengers Enrolled: " + passengerList.getPassengerCount());
 
+        for (Passenger passenger : passengerList.getPassengerList()) {
+            System.out.println("Passenger Name: " + passenger.getPassengerName()
+                        + "\nPassenger Number: " + passenger.getPassengerNumber());
+        }
     }
 }
