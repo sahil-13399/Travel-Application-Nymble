@@ -19,7 +19,7 @@ public class Passenger {
         this.passengerNumber = passengerNumber;
     }
 
-    private int balance;
+    private float balance;
     private List<ActivityPassenger> activityPassengerList;
 
     public Passenger(int passengerId, String passengerName, String passengerCategory, int balance) {
@@ -49,7 +49,7 @@ public class Passenger {
         return passengerCategory;
     }
 
-    public int getBalance() {
+    public float getBalance() {
         return balance;
     }
 
@@ -65,7 +65,7 @@ public class Passenger {
         this.passengerCategory = passengerCategory;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(float balance) {
         this.balance = balance;
     }
 }

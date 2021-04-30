@@ -1,5 +1,6 @@
 package com.nymble.demo.travel.Service.Passenger;
 
+import com.nymble.demo.travel.Exchanges.ActivityPassenger;
 import com.nymble.demo.travel.Exchanges.PassengerList;
 import com.nymble.demo.travel.Exchanges.PassengerResult;
 import com.nymble.demo.travel.dto.Passenger;
@@ -12,14 +13,28 @@ public class PassengerServiceImpl implements PassengerService {
     public PassengerResult getPassenger(TravelPackage travelPackage, int passengerId) {
         PassengerResult passengerResult = null;
         List<Passenger> passengerList = travelPackage.getPackagePassenger();
+
         for (Passenger passenger : passengerList) {
             if (passenger.getPassengerId() == passengerId) {
+                float balance = calculateBalance(passenger);
                 passengerResult = new PassengerResult(
                         passenger.getPassengerName(),
-                        passenger.getPassengerNumber(),passenger.getActivityPassengerList());
+                        passenger.getPassengerNumber(),balance,passenger.getActivityPassengerList());
             }
         }
         return passengerResult;
+    }
+
+    private float calculateBalance(Passenger passenger) {
+        float balance = passenger.getBalance();
+        if(balance == -1) {
+            return -1;
+        }
+        for (ActivityPassenger activityPassenger : passenger.getActivityPassengerList()) {
+            balance -= activityPassenger.getPrice();
+        }
+        passenger.setBalance(balance);
+        return balance;
     }
 
     @Override

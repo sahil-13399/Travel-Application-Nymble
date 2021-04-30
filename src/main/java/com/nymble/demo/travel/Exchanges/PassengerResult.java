@@ -11,5 +11,6 @@ public class PassengerResult {
 
     private String passengerName;
     private String passengerNumber;
+    private float balance;
     private List<ActivityPassenger> passengerActivityList;
 }
