@@ -1,12 +1,16 @@
 package com.nymble.demo.travel.Exchanges;
 
+import com.nymble.demo.travel.dto.Passenger;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
+@AllArgsConstructor
 public class PassengerList {
    private String packageName;
-   private String packageCapactiy;
+   private int packageCapactiy;
    private int passengerCount;
-   private String passengerName;
-   private String passengerNumber;
+   private List<Passenger> passengerList;
 }

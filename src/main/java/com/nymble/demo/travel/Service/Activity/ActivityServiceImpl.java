@@ -34,7 +34,7 @@ public class ActivityServiceImpl implements ActivityService {
         }
         for (String activityName : activityHashMap.keySet()) {
             ActivityList activityList = activityHashMap.get(activityName);
-            if(activityList.getVacantSpaces() == 0) {
+            if(activityList.getVacantSpaces() != 0) {
                 list.add(activityList);
             }
         }

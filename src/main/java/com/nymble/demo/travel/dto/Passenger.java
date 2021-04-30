@@ -8,7 +8,17 @@ import java.util.List;
 public class Passenger {
     private int passengerId;
     private String passengerName;
+    private String passengerNumber;
     private String passengerCategory;
+
+    public String getPassengerNumber() {
+        return passengerNumber;
+    }
+
+    public void setPassengerNumber(String passengerNumber) {
+        this.passengerNumber = passengerNumber;
+    }
+
     private int balance;
     private List<ActivityPassenger> activityPassengerList;
 
