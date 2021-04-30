@@ -4,6 +4,7 @@ import com.nymble.demo.travel.Exchanges.ActivityPassenger;
 
 import java.util.List;
 
+
 public class Passenger {
     private int passengerId;
     private String passengerName;
@@ -16,6 +17,14 @@ public class Passenger {
         this.passengerName = passengerName;
         this.passengerCategory = passengerCategory;
         this.balance = balance;
+    }
+
+    public List<ActivityPassenger> getActivityPassengerList() {
+        return activityPassengerList;
+    }
+
+    public void setActivityPassengerList(List<ActivityPassenger> activityPassengerList) {
+        this.activityPassengerList = activityPassengerList;
     }
 
     public int getPassengerId() {

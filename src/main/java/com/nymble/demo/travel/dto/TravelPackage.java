@@ -1,7 +1,10 @@
 package com.nymble.demo.travel.dto;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class TravelPackage {
     private int packageId;
     private String packageName;
