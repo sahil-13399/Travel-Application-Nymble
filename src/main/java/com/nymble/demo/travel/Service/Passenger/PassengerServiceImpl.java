@@ -3,12 +3,18 @@ package com.nymble.demo.travel.Service.Passenger;
 import com.nymble.demo.travel.Exchanges.ActivityPassenger;
 import com.nymble.demo.travel.Exchanges.PassengerList;
 import com.nymble.demo.travel.Exchanges.PassengerResult;
+import com.nymble.demo.travel.Printer.PassengerPrinter.PassengerPrinter;
 import com.nymble.demo.travel.dto.Passenger;
 import com.nymble.demo.travel.dto.TravelPackage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public class PassengerServiceImpl implements PassengerService {
+
+    @Autowired
+    PassengerPrinter passengerPrinter;
+
     @Override
     public PassengerResult getPassenger(TravelPackage travelPackage, int passengerId) {
         PassengerResult passengerResult = null;
@@ -22,6 +28,7 @@ public class PassengerServiceImpl implements PassengerService {
                         passenger.getPassengerNumber(),balance,passenger.getActivityPassengerList());
             }
         }
+        passengerPrinter.passengerPrinter(passengerResult);
         return passengerResult;
     }
 
@@ -44,6 +51,7 @@ public class PassengerServiceImpl implements PassengerService {
         passengerList = new PassengerList(
                 travelPackage.getPackageName(),
                 travelPackage.getPackageCapacity(),passengers.size(),passengers);
+        passengerPrinter.allPassengersPrinter(passengerList);
         return passengerList;
     }
 }
