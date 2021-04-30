@@ -2,16 +2,22 @@ package com.nymble.demo.travel.Service.Activity;
 
 import com.nymble.demo.travel.Exchanges.ActivityList;
 import com.nymble.demo.travel.Exchanges.ActivityPassenger;
+import com.nymble.demo.travel.Printer.ActivityPrinter.ActivityPrinter;
 import com.nymble.demo.travel.dto.Activity;
 import com.nymble.demo.travel.dto.Destination;
 import com.nymble.demo.travel.dto.Passenger;
 import com.nymble.demo.travel.dto.TravelPackage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class ActivityServiceImpl implements ActivityService {
+
+    @Autowired
+    ActivityPrinter activityPrinter;
+
     @Override
     public List<ActivityList> getAllActivities(TravelPackage travelPackage) {
         List<ActivityList> list = new ArrayList<>();
@@ -38,7 +44,7 @@ public class ActivityServiceImpl implements ActivityService {
                 list.add(activityList);
             }
         }
-
+        activityPrinter.printActivities(list);
         return list;
     }
 }
