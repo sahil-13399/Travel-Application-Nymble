@@ -4,7 +4,6 @@ import com.nymble.demo.travel.Exchanges.ActivityPassenger;
 
 import java.util.List;
 
-
 public class Passenger {
     private int passengerId;
     private String passengerName;
