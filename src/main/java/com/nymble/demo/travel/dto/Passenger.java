@@ -1,9 +1,11 @@
 package com.nymble.demo.travel.dto;
 
 import com.nymble.demo.travel.Exchanges.ActivityPassenger;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@NoArgsConstructor
 public class Passenger {
     private int passengerId;
     private String passengerName;

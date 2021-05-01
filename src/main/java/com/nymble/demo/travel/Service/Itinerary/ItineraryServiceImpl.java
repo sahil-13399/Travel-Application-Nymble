@@ -4,7 +4,9 @@ import com.nymble.demo.travel.Exchanges.PackageList;
 import com.nymble.demo.travel.Printer.ItineraryPrinter.ItineraryPrinter;
 import com.nymble.demo.travel.dto.TravelPackage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ItineraryServiceImpl implements ItineraryService {
 
     @Autowired

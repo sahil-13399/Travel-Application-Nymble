@@ -12,9 +12,9 @@ public class ActivityPrinterImpl implements ActivityPrinter{
     public void printActivities(List<ActivityList> activityLists) {
         for (ActivityList activityList : activityLists) {
             Activity activity = activityList.getActivity();
-            System.out.println("Activity Name: "+activity.getActivityName()+"\nActivity Description"
+            System.out.println("Activity Name: "+activity.getActivityName()+"\nActivity Description: "
                     +activity.getActivityDescription()+"\nActivity Cost: "+activity.getActivityCost()
-            +"\nActivity Capacity "+activity.getCapacity()+"\nRemaining seats"+activityList.getVacantSpaces());
+            +"\nActivity Capacity: "+activity.getCapacity()+"\nRemaining seats: "+activityList.getVacantSpaces()+"\n");
         }
     }
 }

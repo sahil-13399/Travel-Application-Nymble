@@ -12,15 +12,16 @@ public class ItineraryPrinterImpl implements ItineraryPrinter{
 
     @Override
     public void printItinerary(PackageList packageList) {
-        System.out.println(packageList.getPackageName());
+        System.out.println("Package Name: "+packageList.getPackageName());
         List<Destination> destinationList = packageList.getDestinationList();
         for(Destination destination : destinationList) {
-            System.out.println(destination.getDestinationName());
+            System.out.println("Destination Name:== "+ destination.getDestinationName());
+            System.out.println("---------------------");
             List<Activity> activities = destination.getDestinationActivities();
             for(Activity activity : activities) {
-                System.out.println("Activity Name: "+activity.getActivityName()+"\nActivity Description"
+                System.out.println("Activity Name: "+activity.getActivityName()+"\nActivity Description: "
                         +activity.getActivityDescription()+"\nActivity Cost: "+activity.getActivityCost()
-                        +"\nActivity Capacity "+activity.getCapacity()+"\nRemaining seats");
+                        +"\nActivity Capacity: "+activity.getCapacity()+"\n");
             }
         }
     }

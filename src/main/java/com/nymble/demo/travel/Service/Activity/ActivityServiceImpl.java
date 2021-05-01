@@ -8,11 +8,13 @@ import com.nymble.demo.travel.dto.Destination;
 import com.nymble.demo.travel.dto.Passenger;
 import com.nymble.demo.travel.dto.TravelPackage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
+@Service
 public class ActivityServiceImpl implements ActivityService {
 
     @Autowired
@@ -22,7 +24,7 @@ public class ActivityServiceImpl implements ActivityService {
     public List<ActivityList> getAllActivities(TravelPackage travelPackage) {
         List<ActivityList> list = new ArrayList<>();
         List<Destination> destinationList = travelPackage.getPackageDestinations();
-        HashMap<String,ActivityList> activityHashMap = new HashMap<>();
+        LinkedHashMap<String,ActivityList> activityHashMap = new LinkedHashMap<>();
         for (Destination destination : destinationList) {
             List<Activity> activities = destination.getDestinationActivities();
             for (Activity activity : activities) {
