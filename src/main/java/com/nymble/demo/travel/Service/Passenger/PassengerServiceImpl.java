@@ -7,9 +7,11 @@ import com.nymble.demo.travel.Printer.PassengerPrinter.PassengerPrinter;
 import com.nymble.demo.travel.dto.Passenger;
 import com.nymble.demo.travel.dto.TravelPackage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PassengerServiceImpl implements PassengerService {
 
     @Autowired

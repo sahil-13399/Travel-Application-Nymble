@@ -22,11 +22,12 @@ public class PassengerPrinterImpl implements PassengerPrinter {
                     + "\nPassenger Number: " + passengerResult.getPassengerNumber()
                     + "\nPassenger Balance: Not Applicable(Premium Member)");
         }
+        System.out.println("-----------------");
         List<ActivityPassenger> activityPassengerList = passengerResult.getPassengerActivityList();
         for(ActivityPassenger activityPassenger : activityPassengerList) {
             System.out.println("Activity Name: " + activityPassenger.getName()
                     + "\nDestination: " + activityPassenger.getDestination()
-                    + "\nPrice to customer: " + activityPassenger.getPrice());
+                    + "\nPrice to customer: " + activityPassenger.getPrice()+"\n");
         }
     }
 
@@ -35,10 +36,10 @@ public class PassengerPrinterImpl implements PassengerPrinter {
         System.out.println("Package Name: " + passengerList.getPackageName()
                     + "\nPassenger Capacity: " + passengerList.getPackageCapacity()
                     + "\nPassengers Enrolled: " + passengerList.getPassengerCount());
-
+        System.out.println("------------------");
         for (Passenger passenger : passengerList.getPassengerList()) {
             System.out.println("Passenger Name: " + passenger.getPassengerName()
-                        + "\nPassenger Number: " + passenger.getPassengerNumber());
+                        + "\nPassenger Number: " + passenger.getPassengerNumber()+"\n");
         }
     }
 }
