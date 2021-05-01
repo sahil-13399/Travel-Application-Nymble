@@ -1,0 +1,120 @@
+[{
+  "packageId" : 1,
+  "packageName" : "Indonesia 7D/6N",
+  "packageCapacity" : 25,
+  "packageDestinations" : [
+    {
+      "destinationId" : 1,
+      "destinationName" : "Bali",
+      "destinationActivities" : [
+        {
+          "activityId" : 1,
+          "activityName" : "Mount and Lake Batur",
+          "activityDescription" : "The highlight of this tour is the magnificent view of Mount and Lake Batur with the smoky Agung Volcano in the background",
+          "activityCost" : 10.99,
+          "capacity" : 7
+        },
+        {
+          "activityId" : 2,
+          "activityName" : "Coffee Plantation",
+          "activityDescription" : "A place to see various Tropical plantations such as coffee robusta, pineapple, Balinese snake fruite(salak), plain Balinese potatoes, fruit stars, cacao, jack fruit, durian tree and many more, experience to see how to make Balinese coffee in very traditional ways, and taste the fresh of Balinese coffee or ginger tea with green view river valley and also They sell variety of their original Balinese coffee products, herbal oil etc. and you will also get to see the civet cat the most expensive coffee maker, well known as Luwak , its produce Coffee Luwak.",
+          "activityCost" : 15.25,
+          "capacity" : 15
+        },
+        {
+          "activityId" : 3,
+          "activityName" : "Day tour at Bali",
+          "activityDescription" : "En-route stops at Celuk the center of gold and silver works, Mas the center of woodcarvings, Ubud the center of Balinese paintings, Goa Gajah (elephant cave) and the holy springs of Tirta Empul at Tampaksiring. Stop over at the Coffee Plantation.",
+          "activityCost" : 19.99,
+          "capacity" : 10
+        }
+      ]
+    },
+    {
+      "destinationId" : 2,
+      "destinationName" : "Jakarta",
+      "destinationActivities" : [
+        {
+          "activityId" : 1,
+          "activityName" : "Night Tour",
+          "activityDescription" : "The city is filled with amazing sights, an exciting nightlife and vibrant shopping areas. The city is also the centre and melting pot of Indonesian culture which might be the thing for you to enjoy Jakarta.",
+          "activityCost" : 24.99,
+          "capacity" : 12
+        },
+        {
+          "activityId" : 2,
+          "activityName" : "Half day tour",
+          "activityDescription" : "Visit the central-National Museum (closed on Mondays), Sunda Kelapa fischer and local merchant’s Harbor, Fatahillah Square with its old Town hall and glimpse of the National Monument.Continue your tour with visit to The Jalan Surabaya antique / flea market.Remaining time is at leisure to enjoy this vibrant city on your own.Return to the hotel for a comfortable overnight stay.",
+          "activityCost" : 24.99,
+          "capacity" : 12
+        },
+        {
+          "activityId" : 3,
+          "activityName" : "Indonesia in Miniature Park",
+          "activityDescription" : "The Beautiful Indonesia in Miniature Park (Taman Mini Indonesia Indah; “Taman Mini”), in Jakarta, is a “living museum” that highlights the current diversity of Indonesia’s peoples and lifestyles. The park contains furnished and decorated replicas of houses of various ethnic groups in Indonesia",
+          "activityCost" : 19.99,
+          "capacity" : 10
+        }
+    ]
+    }],
+  "packagePassenger" : [
+    {
+      "passengerId" : 1,
+      "passengerName" : "Alex",
+      "passengerNumber" : "10028000",
+      "passengerCategory" : "standard",
+      "balance" : 1000,
+      "activityPassengerList" : [
+        {
+          "destination" : "Bali",
+          "name" : "Mount and Lake Batur",
+          "price" : 10.99
+        },
+        {
+          "destination" : "Bali",
+          "name" : "Coffee Plantation",
+          "price" : 15.25
+        }
+      ]
+    },
+    {
+      "passengerId" : 2,
+      "passengerName" : "Mason",
+      "passengerNumber" : "19221410",
+      "passengerCategory" : "gold",
+      "balance" : 1000,
+      "activityPassengerList" : [
+        {
+          "destination" : "Bali",
+          "name" : "Mount and Lake Batur",
+          "price" : 9.89
+        },
+        {
+          "destination" : "Jakarta",
+          "name" : "Night Tour",
+          "price" : 22.49
+        }
+      ]
+    },
+    {
+      "passengerId" : 3,
+      "passengerName" : "Matthew",
+      "passengerNumber" : "18746828",
+      "passengerCategory" : "premium",
+      "balance" : -1,
+      "activityPassengerList" : [
+        {
+          "destination" : "Bali",
+          "name" : "Mount and Lake Batur",
+          "price" : 0
+        },
+        {
+          "destination" : "Bali",
+          "name" : "Coffee Plantation",
+          "price" : 0
+        }
+      ]
+    }
+  ]
+}
+]

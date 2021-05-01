@@ -2,6 +2,8 @@ package com.nymble.demo.travel.Service.Passenger;
 
 import com.nymble.demo.travel.BalanceUpdate.BalanceUpdate;
 import com.nymble.demo.travel.BalanceUpdateFactory.BalanceUpdateFactory;
+import com.nymble.demo.travel.Exceptions.ActivityUnavailable;
+import com.nymble.demo.travel.Exceptions.NoVacancyInActivity;
 import com.nymble.demo.travel.Exchanges.ActivityPassenger;
 import com.nymble.demo.travel.dto.Activity;
 import com.nymble.demo.travel.dto.Destination;
@@ -17,7 +19,8 @@ public class PassengerSignUpServiceImpl implements PassengerSignUpService{
     BalanceUpdateFactory balanceUpdateFactory;
 
     @Override
-    public void passengerSignUp(Passenger passenger, TravelPackage travelPackage, String activityName) {
+    public void passengerSignUp(Passenger passenger, TravelPackage travelPackage, String activityName) throws ActivityUnavailable {
+        boolean isPresent = false;
         List<Destination> destinationList = travelPackage.getPackageDestinations();
         BalanceUpdate balanceUpdate = balanceUpdateFactory.getBalanceUpdateObject(
                 passenger.getPassengerCategory());
@@ -25,14 +28,34 @@ public class PassengerSignUpServiceImpl implements PassengerSignUpService{
             List<Activity> activities = destination.getDestinationActivities();
             for(Activity activity : activities) {
                 if (activityName.equals(activity.getActivityName())) {
+                    try {
+                        if(activity.getCapacity() == 0) {
+                            throw new NoVacancyInActivity("All seats for this Activity are booked");
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                     List<ActivityPassenger> activityPassengers = passenger.getActivityPassengerList();
-                    activityPassengers.add(new ActivityPassenger(destination.getDestinationName()
-                            ,activityName,balanceUpdate.updateBalance(passenger,activity)));
+                    try {
+                        activityPassengers.add(new ActivityPassenger(destination.getDestinationName()
+                                ,activityName,balanceUpdate.updateBalance(passenger,activity)));
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+
                     passenger.setActivityPassengerList(activityPassengers);
                     activity.reduceCapacity();
+                    isPresent = true;
                     break;
                 }
             }
+            if (isPresent) {
+                break;
+            }
         }
+        if(!isPresent) {
+            throw new ActivityUnavailable("The Activity is not present");
+        }
+
     }
 }
