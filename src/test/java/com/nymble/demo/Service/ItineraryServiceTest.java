@@ -40,6 +40,6 @@ public class ItineraryServiceTest {
     public void printItineraryTest() {
         TravelPackage travelPackage = travelPackageList.get(0);
         PackageList packageList = itineraryService.getItinerary(travelPackage);
-        assertEquals(4 ,4);
+        assertEquals("Jakarta" ,packageList.getDestinationList().get(1).getDestinationName());
     }
 }
