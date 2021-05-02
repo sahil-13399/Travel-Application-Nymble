@@ -74,6 +74,6 @@ public class PassengerServiceTest {
     @Test
     public void printAllPassengersTest() {
         PassengerList passengerList = passengerService.getAllPassengers(travelPackageList.get(0));
-        assertEquals(1,1);
+        assertEquals(3,passengerList.getPassengerCount());
     }
 }
