@@ -1,3 +1,14 @@
+/**
+ <h1>Itinerary Printer</h1>
+ Prints out the travel package
+ details. Including passenger
+ details.
+
+ * @author  Sahil Samantaray
+ * @version 1.0
+ * @since   2021-05-01
+ */
+
 package com.nymble.demo.travel.Printer.ItineraryPrinter;
 
 import com.nymble.demo.travel.Exchanges.PackageList;
@@ -9,6 +20,15 @@ import java.util.List;
 
 @Service
 public class ItineraryPrinterImpl implements ItineraryPrinter{
+
+    /**
+     *  Prints out the travel package
+     *  details. Including passenger
+     *  details.
+     * @param packageList This is the first parameter to printItinerary method
+     *                      which is an object of PackageList Class
+     * @return void
+     */
 
     @Override
     public void printItinerary(PackageList packageList) {

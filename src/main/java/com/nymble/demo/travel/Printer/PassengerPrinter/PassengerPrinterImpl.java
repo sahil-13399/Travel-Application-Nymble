@@ -1,3 +1,13 @@
+/**
+ <h1>Passenger Printer</h1>
+ Prints out the passenger
+ details.
+
+ * @author  Sahil Samantaray
+ * @version 1.0
+ * @since   2021-05-01
+ */
+
 package com.nymble.demo.travel.Printer.PassengerPrinter;
 
 import com.nymble.demo.travel.dto.ActivityPassenger;
@@ -10,6 +20,14 @@ import java.util.List;
 
 @Service
 public class PassengerPrinterImpl implements PassengerPrinter {
+
+    /**
+     *  Prints out a single passenger
+     *  detail.
+     * @param passengerResult This is the first parameter to passengerPrinter method
+     *                      which is an object of PassengerResult Class
+     * @return void
+     */
 
     @Override
     public void passengerPrinter(PassengerResult passengerResult) {
@@ -30,6 +48,14 @@ public class PassengerPrinterImpl implements PassengerPrinter {
                     + "\nPrice to customer: " + activityPassenger.getPrice()+"\n");
         }
     }
+
+    /**
+     *  Prints out list of passengers in the travel package in
+     *  detail.
+     * @param passengerList This is the first parameter to passengerPrinter method
+     *                      which is an object of PassengerList Class
+     * @return void
+     */
 
     @Override
     public void allPassengersPrinter(PassengerList passengerList) {

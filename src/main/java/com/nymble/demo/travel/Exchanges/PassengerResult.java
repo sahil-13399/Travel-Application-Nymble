@@ -9,8 +9,8 @@
  @param passengerActivityList : type List<ActivityPassenger>
 
   * @author  Sahil Samantaray
- * @version 1.0
- * @since   2021-05-01
+  * @version 1.0
+  * @since   2021-05-01
  */
 
 package com.nymble.demo.travel.Exchanges;
