@@ -5,6 +5,8 @@ This application is used to manage several packages that contain details regardi
 
 ### Introductiom
 ### Methodology
+* High Level Block Diagram : https://drive.google.com/file/d/10MKxaco9xEnSkE8UkPKbHoZ7v-8x1UsH/view?usp=sharing
+* Low level Class level Diagram : https://drive.google.com/file/d/1xllzKkfyl2UuFyP_U2rtuqgSiuhkAfdt/view?usp=sharing
 ### Results
 
 ## Getting Started
