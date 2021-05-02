@@ -1,5 +1,6 @@
 package com.nymble.demo.travel.Exchanges;
 
+import com.nymble.demo.travel.dto.ActivityPassenger;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

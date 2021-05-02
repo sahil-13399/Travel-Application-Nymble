@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ItineraryServiceImpl implements ItineraryService {
 
     @Autowired
-    ItineraryPrinter itineraryPrinter;
+        ItineraryPrinter itineraryPrinter;
 
     @Override
     public PackageList getItinerary(TravelPackage travelPackage) {

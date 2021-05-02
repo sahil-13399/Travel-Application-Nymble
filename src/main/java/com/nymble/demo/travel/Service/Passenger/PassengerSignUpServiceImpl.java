@@ -4,7 +4,7 @@ import com.nymble.demo.travel.BalanceUpdate.BalanceUpdate;
 import com.nymble.demo.travel.BalanceUpdateFactory.BalanceUpdateFactory;
 import com.nymble.demo.travel.Exceptions.ActivityUnavailable;
 import com.nymble.demo.travel.Exceptions.NoVacancyInActivity;
-import com.nymble.demo.travel.Exchanges.ActivityPassenger;
+import com.nymble.demo.travel.dto.ActivityPassenger;
 import com.nymble.demo.travel.dto.Activity;
 import com.nymble.demo.travel.dto.Destination;
 import com.nymble.demo.travel.dto.Passenger;
@@ -16,13 +16,14 @@ import java.util.List;
 public class PassengerSignUpServiceImpl implements PassengerSignUpService{
 
     @Autowired
-    BalanceUpdateFactory balanceUpdateFactory;
+    private BalanceUpdateFactory balanceUpdateFactory;
+    private BalanceUpdate balanceUpdate;
 
     @Override
     public void passengerSignUp(Passenger passenger, TravelPackage travelPackage, String activityName) throws ActivityUnavailable {
         boolean isPresent = false;
         List<Destination> destinationList = travelPackage.getPackageDestinations();
-        BalanceUpdate balanceUpdate = balanceUpdateFactory.getBalanceUpdateObject(
+        balanceUpdate = balanceUpdateFactory.getBalanceUpdateObject(
                 passenger.getPassengerCategory());
         for(Destination destination : destinationList) {
             List<Activity> activities = destination.getDestinationActivities();

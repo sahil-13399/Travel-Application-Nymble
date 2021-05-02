@@ -1,7 +1,7 @@
 package com.nymble.demo.travel.Service.Activity;
 
 import com.nymble.demo.travel.Exchanges.ActivityList;
-import com.nymble.demo.travel.Exchanges.ActivityPassenger;
+import com.nymble.demo.travel.dto.ActivityPassenger;
 import com.nymble.demo.travel.Printer.ActivityPrinter.ActivityPrinter;
 import com.nymble.demo.travel.dto.Activity;
 import com.nymble.demo.travel.dto.Destination;
@@ -18,7 +18,7 @@ import java.util.List;
 public class ActivityServiceImpl implements ActivityService {
 
     @Autowired
-    ActivityPrinter activityPrinter;
+    private ActivityPrinter activityPrinter;
 
     @Override
     public List<ActivityList> getAllActivities(TravelPackage travelPackage) {

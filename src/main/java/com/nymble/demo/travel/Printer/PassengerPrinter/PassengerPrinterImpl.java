@@ -1,6 +1,6 @@
 package com.nymble.demo.travel.Printer.PassengerPrinter;
 
-import com.nymble.demo.travel.Exchanges.ActivityPassenger;
+import com.nymble.demo.travel.dto.ActivityPassenger;
 import com.nymble.demo.travel.Exchanges.PassengerList;
 import com.nymble.demo.travel.Exchanges.PassengerResult;
 import com.nymble.demo.travel.dto.Passenger;

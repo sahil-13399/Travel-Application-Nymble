@@ -1,4 +1,4 @@
-package com.nymble.demo.travel.Exchanges;
+package com.nymble.demo.travel.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
