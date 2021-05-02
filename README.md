@@ -3,7 +3,9 @@
 This application is used to manage several packages that contain details regarding destinations and the activites present in the destinations, It also keeps a record of how many people have enrolled in this package.
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+### Introductiom
+### Methodology
+### Results
 
 ## Getting Started
 
@@ -22,16 +24,20 @@ An in-depth paragraph about your project and overview of use.
 
 ### Executing program
 
-* How to run the program
+* Build the program (Run the tests)
 ```
-code blocks for commands
+./gradlew build
+```
+* Run the SpringBoot Application
+```
+./gradlew bootRun
 ```
 
 ## Help
 
-Any advise for common problems or issues.
+Any advise for common problems or issues. Run the following in terminal
 ```
-command to run if program contains helper info
+./gradlew build --stacktrace --info
 ```
 
 ## Authors
