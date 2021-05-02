@@ -68,7 +68,8 @@ public class ActivityServiceImpl implements ActivityService {
         }
         for (String activityName : activityHashMap.keySet()) {
             ActivityList activityList = activityHashMap.get(activityName);
-            if(activityList.getVacantSpaces() != 0) {
+            //System.out.println(activityList.getVacantSpaces());
+            if(activityList.getVacantSpaces() > 0) {
                 list.add(activityList);
             }
         }

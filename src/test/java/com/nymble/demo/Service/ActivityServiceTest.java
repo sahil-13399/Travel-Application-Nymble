@@ -1,3 +1,13 @@
+/**
+ <h1>Activity Service Test</h1>
+ Verify if the available activities
+ are being printed correctly or not.
+
+ * @author  Sahil Samantaray
+ * @version 1.0
+ * @since   2021-05-01
+ */
+
 package com.nymble.demo.Service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -35,6 +45,14 @@ public class ActivityServiceTest {
         return objectMapper.readValue(file, new TypeReference<List<TravelPackage>>() {
         });
     }
+
+    /**
+     *   1. After running the test, the method annotated with @BeforeEach runs.
+     *   2. The setUp method uses Jackson ObjectMapper to read JSON values and map it to TravelPackage.
+     *   3. Choose the first object in TravelPackage list.
+     *   4. Then call the method getAllActivities()
+     *   5. Verify the results using assertEquals method
+     */
 
     @Test
     public void printAvailableActivitiesTest() {
