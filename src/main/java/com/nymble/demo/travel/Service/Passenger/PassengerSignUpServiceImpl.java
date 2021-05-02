@@ -22,9 +22,11 @@ import com.nymble.demo.travel.dto.Destination;
 import com.nymble.demo.travel.dto.Passenger;
 import com.nymble.demo.travel.dto.TravelPackage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PassengerSignUpServiceImpl implements PassengerSignUpService{
 
     @Autowired
@@ -88,6 +90,5 @@ public class PassengerSignUpServiceImpl implements PassengerSignUpService{
         if(!isPresent) {
             throw new ActivityUnavailable("The Activity is not present");
         }
-
     }
 }

@@ -20,8 +20,8 @@ public class GoldUpdate implements BalanceUpdate{
      *   Updates the balance for the gold
      *   passenger category. The gold users
      *   get 10% discount.
-     * @param passenger This is the first paramter to updateBalance method which is an object of Passenger Class
-     * @param activity  This is the second paramter to updateBalance method which is an object of Activity Class
+     * @param passenger This is the first parameter to updateBalance method which is an object of Passenger Class
+     * @param activity  This is the second parameter to updateBalance method which is an object of Activity Class
      * @return float This returns cost paid for activity.
      * @exception BalanceInsufficient exception on insufficient balance
      */
@@ -29,6 +29,7 @@ public class GoldUpdate implements BalanceUpdate{
     @Override
     public float updateBalance(Passenger passenger, Activity activity) throws BalanceInsufficient {
         float cost = (float) (0.9 * activity.getActivityCost());
+        cost = (float) (Math.round(cost * 100.0) / 100.0);
         float balance = passenger.getBalance();
         if(cost > balance) {
             throw new BalanceInsufficient("Insufficient balance to process");

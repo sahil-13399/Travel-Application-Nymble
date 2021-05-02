@@ -16,8 +16,8 @@ public class PremiumUpdate implements BalanceUpdate{
     /**
      *   Returns 0 as premium users
      *   don't need to pay for activity.
-     * @param passenger This is the first paramter to updateBalance method which is an object of Passenger Class
-     * @param activity  This is the second paramter to updateBalance method which is an object of Activity Class
+     * @param passenger This is the first parameter to updateBalance method which is an object of Passenger Class
+     * @param activity  This is the second parameter to updateBalance method which is an object of Activity Class
      * @return float This returns cost paid for activity. Which is zero in this case
      */
 

@@ -28,7 +28,7 @@ public class ItineraryServiceImpl implements ItineraryService {
      *   2. This package list object contains travel package details.
      *   3. Print the details using printItinerary method.
      *   4. Return the packageList to caller method.
-     * @param travelPackage This is the first paramter to getItinerary method which is an object of TravelPackage Class
+     * @param travelPackage This is the first parameter to getItinerary method which is an object of TravelPackage Class
      * @return float This returns cost paid for activity.
      */
 

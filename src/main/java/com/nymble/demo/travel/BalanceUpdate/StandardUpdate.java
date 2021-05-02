@@ -21,8 +21,8 @@ public class StandardUpdate implements BalanceUpdate{
      *   Updates the balance for the standard
      *   passenger category. The standard users
      *   get no discount.
-     * @param passenger This is the first paramter to updateBalance method which is an object of Passenger Class
-     * @param activity  This is the second paramter to updateBalance method which is an object of Activity Class
+     * @param passenger This is the first parameter to updateBalance method which is an object of Passenger Class
+     * @param activity  This is the second parameter to updateBalance method which is an object of Activity Class
      * @return float This returns cost paid for activity.
      * @exception BalanceInsufficient exception on insufficient balance
      */

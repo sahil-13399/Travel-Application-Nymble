@@ -35,8 +35,8 @@ public class PassengerServiceImpl implements PassengerService {
      *   4. To do this we call the calculateBalance() method.
      *   5. Print the passenger result using passengerPrinter.
      *   6. Return the Passenger Result.
-     * @param travelPackage This is the first paramter to getPassenger method which is an object of TravelPackage Class
-     * @param passengerId  This is the second paramter to getPassenger method which is of type int
+     * @param travelPackage This is the first parameter to getPassenger method which is an object of TravelPackage Class
+     * @param passengerId  This is the second parameter to getPassenger method which is of type int
      * @return PassengerResult This returns details of the passenger.
      */
 

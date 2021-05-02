@@ -23,7 +23,7 @@ public class BalanceUpdateFactory {
     /**
      *   It is a factory method which creates
      *   an object for the caller method and returns it.
-     * @param passengerCategory This is the first paramter to getBalanceUpdateObject
+     * @param passengerCategory This is the first parameter to getBalanceUpdateObject
      * method which is an object of String Class
      * @return BalanceUpdate This returns an object of Balance update.
      */

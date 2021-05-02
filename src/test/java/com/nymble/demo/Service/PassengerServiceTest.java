@@ -48,6 +48,7 @@ public class PassengerServiceTest {
     }
 
     /**
+     * //CHECK IF ONE PASSENGER DETAILS ARE BEING PRINTED
      *   1. After running the test, the method annotated with @BeforeEach runs.
      *   2. The setUp method uses Jackson ObjectMapper to read JSON values and map it to TravelPackage.
      *   3. Choose the first object in TravelPackage list.
@@ -62,6 +63,7 @@ public class PassengerServiceTest {
     }
 
     /**
+     * //CHECK IF ALL PASSENGER DETAILS ARE BEING PRINTED
      *   1. After running the test, the method annotated with @BeforeEach runs.
      *   2. The setUp method uses Jackson ObjectMapper to read JSON values and map it to TravelPackage.
      *   3. Choose the first object in TravelPackage list.
