@@ -1,3 +1,20 @@
+/**
+ <h1>Passenger Class</h1>
+ Contains the variables and
+ methods of Passenger class
+
+ @param passengerId : type int
+ @param passengerName : type String
+ @param passengerNumber : type String
+ @param passengerCategory : type String
+ @param balance : type float
+ @param activityPassengerList : type List<ActivityPassenger>
+
+  * @author  Sahil Samantaray
+ * @version 1.0
+ * @since   2021-05-01
+ */
+
 package com.nymble.demo.travel.dto;
 
 import lombok.NoArgsConstructor;
