@@ -1,7 +1,6 @@
-# Project Title
+# Travel Package Manager
 
-Simple overview of use/purpose.
-
+This application is used to manage several packages that contain details regarding destinations and the activites present in the destinations, It also keeps a record of how many people have enrolled in this package.
 ## Description
 
 An in-depth paragraph about your project and overview of use.
@@ -10,18 +9,20 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Windows/MacOS/Ubuntu
+* IntelliJ IDEA or VSCode
+* SpringBoot
+* Gradle
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Clone the repo and open it in your IDE
+* The gradle build tool will take care of the dependencies
+* Run the TravelApplication Class to check if the code is working or not
 
 ### Executing program
 
 * How to run the program
-* Step-by-step bullets
 ```
 code blocks for commands
 ```
@@ -37,26 +38,9 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+ex. Sahil Samantaray, sahil13399@gmail.com
 
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+## Acknowledgements
+* https://www.baeldung.com/
+* https://stackoverflow.com/
+* https://www.journaldev.com/
