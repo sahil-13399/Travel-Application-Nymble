@@ -1,3 +1,15 @@
+/**
+ <h1>Passenger Sign Up Service</h1>
+ Helps to sign up a user for an
+ activity and also updates balance
+ according to the category passenger
+ belongs to.
+
+ * @author  Sahil Samantaray
+ * @version 1.0
+ * @since   2021-05-01
+ */
+
 package com.nymble.demo.travel.Service.Passenger;
 
 import com.nymble.demo.travel.BalanceUpdate.BalanceUpdate;
@@ -18,6 +30,25 @@ public class PassengerSignUpServiceImpl implements PassengerSignUpService{
     @Autowired
     private BalanceUpdateFactory balanceUpdateFactory;
     private BalanceUpdate balanceUpdate;
+
+    /**
+     *   1. Get the list of destinations from travel package.
+     *   2. Use the factory class method BalanceUpdateFactory
+     *   3. This method will give the correct object based on passenger category.
+     *   4. Browse through list of destinations and activities.
+     *   5. After the activity name matches check if capacity is 0 or not.
+     *   6. If it is 0 then return NoVacancyException.
+     *   7. Else add the activity to passenger's activityPassengers list.
+     *   8. While doing so we must also take care of balance update and price paid.
+     *   9. If activity name is not found then throw ActivityUnavailable exception.
+
+     * @param passenger This is the first parameter to passengerSignUp method which is an object of Passenger Class
+     * @param travelPackage  This is the second parameter to passengerSignUp method which is of type TravelPackage
+     * @param activityName  This is the second parameter to passengerSignUp method which is of type String
+     * @return PassengerResult This returns details of the passenger.
+     * @exception ActivityUnavailable exception when activity name is not found.
+     * @exception NoVacancyInActivity exception when no vacant seats are there in the activity.
+     */
 
     @Override
     public void passengerSignUp(Passenger passenger, TravelPackage travelPackage, String activityName) throws ActivityUnavailable {
