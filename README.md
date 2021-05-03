@@ -43,6 +43,7 @@ This application is used to manage several packages that contain details regardi
 * Run the TravelApplication Class to check if the code is working or not
 
 ### Executing program
+* Run all test cases in the test package to see results of individual functions.
 
 * Build the program (Run the tests)
 ```
